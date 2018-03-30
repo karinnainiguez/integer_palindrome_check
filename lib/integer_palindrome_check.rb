@@ -1,5 +1,6 @@
 # Returns true if the input positive integer number forms a palindrome. Returns false otherwise.
 def is_palindrome(number)
+
   return false if number == nil || number < 0
 
   length = 0
@@ -16,8 +17,6 @@ def is_palindrome(number)
     i = number / (10 ** length) % 10
     j = number % (10 ** start) / (10 ** (start-1))
 
-    # puts "i is #{i}"
-    # puts "j is #{j}"
     return false if i != j
 
     length -= 1
@@ -26,7 +25,3 @@ def is_palindrome(number)
 
   return true
 end
-
-is_palindrome(1234321)
-
-is_palindrome(9876543)
